@@ -1,0 +1,67 @@
+.container{
+    width: 46rem;
+    margin:-20px auto;
+}
+
+.formTarefa{
+    display:flex;
+    gap: 8px;
+}
+
+.containerTarefas{
+    margin-top:4rem;
+}
+
+.tarefasHeader{
+    display:flex;
+    justify-content: space-between;
+    height:2.6rem;
+    border-bottom:0.5px solid var(--gray-400);
+}
+
+.tarefasHeader span {
+    line-height: 1.4;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.tarefasCriadas {
+    color: var(--blue);
+}
+
+.tarefasConcluidas{
+    color: var(--purple);      
+}
+
+.tarefasHeader span label{
+    background: var(--gray-400);
+    border-radius:999px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: var(--gray-200);
+    padding:2px 8px;
+    margin-left:0.5rem;
+}
+
+.tarefasBodyContainer{
+    display:flex;
+    flex-direction: column;
+    height:15rem;
+}
+
+.containerVazio{
+    text-align: center;
+    color:var(--gray-300);
+    margin-top: 4rem;
+}
+
+.containerVazio img{
+    width: 56px;
+    height: 56px;
+}
+
+.containerVazio strong, span{
+    display:block;
+    line-height: 1.4;
+    font-size: 1rem;
+}
