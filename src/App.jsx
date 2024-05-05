@@ -13,21 +13,26 @@ import './globals.css';
 
 function App() {
   const [form, setForm] = useState({
-    nome_tarefa: "" ,
-    teste: ""
+    nome_tarefa: ''
   });
-  
+
   const [tarefas, setTarefas] = useState([]);
 
   const handleChangeInput = (state, value ) => {
     setForm({...form, [state]: value})
   }
 
+  const handleSubmit = e => {
+    e.preventDefault();
+    setTarefas([...tarefas, {nome_tarefa: form.nome_tarefa, done:false}])
+    setForm({nome_tarefa: ""})
+  } 
+  
   return (
     <>
       <Header/>
       <main className={style.container}>
-        <form >
+        <form onSubmit={handleSubmit}>
           <section className={style.formTarefa}>
             <Input 
               placeholder="Adicionar uma nova tarefa" 
