@@ -1,11 +1,13 @@
 .cardTask{
     background: var(--gray-500);
+    color: var(--gray-100);
     border-radius: 8px;
     padding:1rem;
     display:flex;
     align-items: flex-start;
     gap:12px;
     height:72px;
+    margin-top: 1rem;
 }
 
 .cardTask + .cardTask {
@@ -16,11 +18,56 @@
     width: 632px;
 }
 
-.cardTask span {
-    color: var(--gray-100);
-    font-size: 14px;
-    line-height: 1.40;
+.cardTask .paragraph {
+    font-size: 0.875rem;
+    line-height: 140%;
+    transition: 0.2s all;
 }
+
+.cardTask label {
+    display:flex;
+    align-items: center;
+    padding:3px;
+    width:24px;
+    height:24px;     
+    border-radius:100%;
+}
+
+.cardTask .contentCheckBox{
+    width:24px;
+    height:24px;  
+    display:flex;
+    justify-content: center;
+    align-items: center;  
+    border-radius: 100%;
+    transition: 0.2s all;
+}
+
+.cardTask label input[type='checkbox']{
+    display:none;
+}
+
+.classCheckboxUnchecked{
+    border:2px solid var(--blue);
+}
+
+.classCheckboxUnchecked:hover{
+    border:2px solid var(--blue);
+    background: var(--blue-dark);
+}
+
+
+.classCheckboxChecked{
+    border:2px solid var(--purple-dark);
+    background: var(--purple-dark);
+}
+
+.paragraphChecked{
+    text-decoration: line-through;
+    line-height: 140%;
+    color: var(--gray-300);
+}
+
 
 .buttonDelete{
     background: transparent;
@@ -28,4 +75,10 @@
     color: var(--gray-300);
     width:24px;
     height: 24px;
+    cursor:pointer;
+
+    transition: 0.2s color;
+}
+.buttonDelete:hover{
+    color: var(--danger);
 }
